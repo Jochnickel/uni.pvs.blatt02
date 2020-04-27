@@ -18,9 +18,10 @@ public class Pair<F,S> {
 
 	public boolean equals(Object other){
 		if (!(other instanceof Pair)) return false;
+		Pair otherPair = (Pair) other;
 		return
-			F.equals(other.getFirst())
-			&& S.equals(other.getSecond());
+			first.equals(otherPair.getFirst())
+			&& second.equals(otherPair.getSecond());
 	}
 
 	public String toString(){
