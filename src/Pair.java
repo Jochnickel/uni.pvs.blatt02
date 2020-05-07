@@ -3,7 +3,7 @@ import java.util.Objects;
 public class Pair<F extends Comparable<F>, S extends Comparable<S>> implements Comparable<Pair<F, S>> {
 	/*
 	Aufgabe 1.1:
-	alle Objektvariablen müssen final sein.
+	Klasse immutable: alle Objektvariablen müssen final sein.
 	
 	Aufgabe 1.2:
 	Es ist sinnvoll, immutables zu verwenden, da man sich damit Null-Checks bzw. validierung der Variablen spart.
