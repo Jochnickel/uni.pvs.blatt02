@@ -1,6 +1,6 @@
 import java.util.Objects;
 
-public class Pair<F,S> implements Comparable<Pair> {
+public class Pair<F extends Comparable<F>, S extends Comparable<S>> implements Comparable<Pair<F, S>> {
 	/*
 	zu Aufgabe 1.1:
 	alle Objektvariablen müssen final sein.
@@ -14,7 +14,7 @@ public class Pair<F,S> implements Comparable<Pair> {
 	*/
 	private final F first;
 	private final S second;
-
+	
 
 	public Pair(F first, S second) {
 		this.first = first;
@@ -29,9 +29,13 @@ public class Pair<F,S> implements Comparable<Pair> {
 
 
 	@Override
-	public int compareTo(T arg0) {
-		
-		return 0;
+	public int compareTo(Pair<F,S> otherPair) {
+		int compareFirst = first.compareTo(otherPair.first);
+		if (0 != compareFirst){
+			return compareFirst;
+		} else {
+			return second.compareTo(otherPair.second);
+		}
 	}
 
 
@@ -61,5 +65,4 @@ public class Pair<F,S> implements Comparable<Pair> {
 	public S getSecond() {
 		return this.second;
 	}
-
 }
