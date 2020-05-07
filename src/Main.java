@@ -4,7 +4,7 @@ import java.util.Iterator;
 import java.util.Stack;
 
 public class Main {
-	// ich fände es unnötig, für jede Teilaufgabe eine neue Methode zu schreiben (wird dadurch nicht übersichtlicher). also alles main()
+	// Aufgabe 2
 	public static void main(String[] args) {
 		//Aufgabe 2.2
 		Stack<Pair<String,Integer>> weDontNeedNoEducation = new Stack<Pair<String,Integer>>();

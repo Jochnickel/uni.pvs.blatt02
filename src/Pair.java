@@ -2,7 +2,7 @@ import java.util.Objects;
 
 public class Pair<F extends Comparable<F>, S extends Comparable<S>> implements Comparable<Pair<F, S>> {
 	/*
-	zu Aufgabe 1.1:
+	Aufgabe 1.1:
 	alle Objektvariablen müssen final sein.
 	
 	Aufgabe 1.2:

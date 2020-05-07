@@ -1,4 +1,5 @@
 public class Sokoban {
+	// Aufgabe 4
 	private static Pair<Integer, Integer> NORTH = new Pair<Integer, Integer>(0,1);
 	private static Pair<Integer, Integer> SOUTH = new Pair<Integer, Integer>(0,-1);
 	private static Pair<Integer, Integer> WEST = new Pair<Integer, Integer>(-1,0);
@@ -37,7 +38,6 @@ public class Sokoban {
 	public Sokoban() {
 		board = getDefaultField();
 	}
-
 
 	public static Pair<Integer,Integer> findPlayer(char[][] board){
 		for(int y = 0; y < board.length; y++){
