@@ -9,7 +9,7 @@ public class Pair<F extends Comparable<F>, S extends Comparable<S>> implements C
 	Es ist sinnvoll, immutables zu verwenden, da man sich damit Null-Checks bzw. validierung der Variablen spart.
 	
 	Aufgabe 1.3:
-	Es ist schwer zu garantieren, dass generische Klassen komplett immutable sind, da man sie mit Objekten "füttern" kann, die nicht immutable sind.
+	Es ist schwer zu garantieren, dass generische Klassen komplett immutable sind, da man sie mit Arrays/Objekten "füttern" kann, die nicht immutable sind.
 	Damit ist nur die Objektreferenz unverändert.
 	*/
 	private final F first;
