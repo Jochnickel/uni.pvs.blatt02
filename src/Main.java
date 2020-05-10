@@ -6,7 +6,8 @@ import java.util.Stack;
 public class Main {
 	// Aufgabe 2
 	public static void main(String[] args) {
-		//Aufgabe 2.2
+		
+		System.out.println("Aufgabe 2.2");
 		Stack<Pair<String,Integer>> weDontNeedNoEducation = new Stack<Pair<String,Integer>>();
 		weDontNeedNoEducation.add(new Pair<String,Integer>("Informatik",1)); // doppelt
 		weDontNeedNoEducation.add(new Pair<String,Integer>("Deutsch",5));
@@ -23,13 +24,18 @@ public class Main {
 		weDontNeedNoEducation.forEach(grade -> System.out.println(grade));
 		System.out.println();
 
-		//Aufgabe 2.3
+		
+		System.out.println("Aufgabe 2.3");
 		// HashSet<Pair<String,Integer>> hs1 = new HashSet<Pair<String,Integer>>(weDontNeedNoEducation);
 		HashSet<Pair<String,Integer>> hashBrowns = new HashSet<Pair<String,Integer>>();
 		
 		for (Iterator<Pair<String,Integer>> iter = weDontNeedNoEducation.iterator(); iter.hasNext();){
-			hashBrowns.add(iter.next());
+			Pair<String,Integer> next = iter.next();
+			if (!hashBrowns.add(next)){
+				System.out.println("Duplikat: "+next);
+			}
 		}
+		System.out.println();
 		hashBrowns.forEach(grade -> System.out.println(grade));
 	}
 }
